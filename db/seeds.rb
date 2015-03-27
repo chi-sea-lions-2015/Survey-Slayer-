@@ -1,4 +1,4 @@
-user = User.create!(name: "Nadia", email: "me@me.me", password_hash: "12345")
+user = User.create!(name: "Nadia", email: "me@me.me", password: "12345")
 survey = user.surveys.create!(title: "Dinos")
 question = survey.questions.create!(title: "What is your favotite Dino?")
 choice1 = question.choices.create!(title: "T-rex")
