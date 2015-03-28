@@ -5,34 +5,18 @@
       <h2><%=@survey.title%></h2><br>
 
       <%@survey.questions.each do |question|%>
-      <%@current_question = @survey.questions.find_by(id: question.id)%>
 
-          <form action="" method="post">
-
-
-            <ul id="survey-in-progress">
-              <li><%=question.id%>. <%=question.title%></li><br>
-
-
-
-              <%question.choices.each do |choice|%>
-
-              <div class="rb">
-              <input class="radio-button" type="radio" name="<%=choice.title%>" value="" /><span>  </span><%=choice.title%>
-              </div>
+          <span>
+            <%=question.id%>. <%=question.title%>
+          </span><br>
 
 
 
 
-              <%end%>
 
-                <br>
-                 <input type="submit" name="submit" value="submit"/>
-
-
-            </ul>
-
-
+          <form action="/participants/survey/<%=@survey_id%>" method="post">
+            <input type="hidden" name="_method" value="put"/>
+            <%= erb :'participants/_choices', locals: { question: question, choices: @choices} %>
           </form>
 
       <%end%>
