@@ -1,12 +1,13 @@
+<div id="show-lists" class="row">
+  <div class="large-12 columns">
+    <div class="panel">
+      <%@surveys.each do |survey|%>
 
+          <a href="/participants/survey/<%=survey.id%>" >
+            <%=survey.title%>
+          </a>
 
-
-
-
-
-
-
-
-<div class="row">
-
+      <%end%>
+    </div>
+  </div>
 </div>
