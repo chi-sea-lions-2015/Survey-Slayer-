@@ -7,5 +7,5 @@ get '/login' do
 end
 
 get '/users/new' do
-  erb:sign_up
+  erb :sign_up
 end

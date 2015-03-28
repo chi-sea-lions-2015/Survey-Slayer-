@@ -3,5 +3,20 @@ $(document).ready(function() {
   // This guarantees that any elements we bind to will exist on the page
   // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  // $("#survey_create_form").submit(function(e){
+  //   e.preventDefault();
+  //   var form = $(this);
+  //   console.log(this);
+  //   $.ajax({
+  //     "url": "/surveys",
+  //     "method": "post",
+  //     "data": form.serialize(),
+  //     "dataType": "json",
+  //     'success': function(response){
+  //       $("").append(response);
+  //     }
+  //   });
+  // });
+
+
 });
