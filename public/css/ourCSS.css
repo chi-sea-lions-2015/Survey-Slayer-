@@ -1,0 +1,21 @@
+/*.row {
+  margin-top: 20%;
+}
+
+.row a {
+  margin-left: 5.5em;
+}
+
+.row div {
+display: grid;
+}
+
+.row div div a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login {
+  background-color: red
+}
+
