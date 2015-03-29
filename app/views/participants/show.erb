@@ -1,11 +1,14 @@
 <div id="show-lists" class="row">
   <div class="large-12 columns">
     <div class="panel">
+
+
+      <h3>Which survey would you like to slay?</h3><br>
       <%@surveys.each do |survey|%>
 
           <a href="/participants/survey/<%=survey.id%>" >
             <%=survey.title%>
-          </a>
+          </a><br>
 
       <%end%>
     </div>
