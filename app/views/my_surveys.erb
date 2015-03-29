@@ -1,27 +1,7 @@
+<%@surveys = @surveys.where(creator_id: current_user.id)%>
+<ul>
+<%@surveys.each do |survey|%>
 
-
-
-<div class="row">
-
-    <div class="panel">
-      <h2>Make or Take a Survey!</h2>
-        <div class="large-4 medium-4 columns">
-         <a href="#" class="small radius button">My surveys</a>
-         <br />
-       </div>
-
-
-        <div class="large-4 medium-4 columns">
-         <a href="/available_surveys" class="small radius button">Take a Survey!</a>
-         <br />
-       </div>
-
-       <div class="large-4 medium-4 columns">
-        <a href="/surveys/new" class="small radius button">Create a New Survey!</a><br />
-
-     </div>
-   </div>
- </div>
-
-</div>
-
+  <li><a href="/surveys/<%=survey.id%>/results"><%=survey.title%></a></li>
+<%end%>
+</ul>

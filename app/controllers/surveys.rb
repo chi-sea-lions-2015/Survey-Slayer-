@@ -1,10 +1,20 @@
 get '/surveys' do
   @surveys = Survey.all
- erb :my_surveys
+ erb :surveys
+end
+
+get '/my_surveys' do
+  @user = current_user
+  @surveys = Survey.all
+  erb :my_surveys
 end
 
 get '/surveys/new' do
   erb :new_survey
+end
+
+get '/surveys/:survey_id/results' do
+  @survey = Survey.find_by(id: params[:survey_id])
 end
 
 post '/surveys' do
