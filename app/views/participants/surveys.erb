@@ -1,0 +1,30 @@
+<div id="show-lists" class="row">
+  <div class="large-12 columns">
+    <div class="panel">
+
+      <h2><%=@survey.title%></h2><br>
+
+      <%@survey.questions.each do |question|%>
+
+          <span>
+            <%=question.id%>. <%=question.title%>
+          </span><br>
+
+
+
+
+
+          <form action="/participants/survey/<%=@survey_id%>" method="post">
+            <input type="hidden" name="_method" value="put"/>
+            <%= erb :'participants/_choices', locals: { question: question, choices: @choices} %>
+          </form>
+
+      <%end%>
+
+
+
+    </div>
+  </div>
+</div>
+
+
