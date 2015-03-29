@@ -7,6 +7,7 @@ get '/login' do
 end
 
 get '/users/new' do
+
   @user = User.new
   erb :sign_up
 end
