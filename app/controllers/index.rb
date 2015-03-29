@@ -7,5 +7,17 @@ get '/login' do
 end
 
 get '/users/new' do
-  erb:sign_up
+  @user = User.new
+  erb :sign_up
+end
+
+post '/users' do
+  @user = User.create(params[:user])
+  if @user.valid?
+    session[:user_id] = @user.id
+    redirect "/surveys"
+  else
+    # @errors = @user.errors.messages
+    erb :sign_up
+  end
 end
