@@ -1,5 +1,6 @@
-/*.row {
-  margin-top: 20%;
+.row {
+  margin-top: 10%;
+/*  height: 25em;*/
 }
 
 .row a {
@@ -20,6 +21,35 @@ display: grid;
 }
 
 #show-lists {
-  margin-top: 10em;
+  margin-bottom: 6em;
 
 }
+
+#surv {
+  height: 12em;
+}
+
+#surv a {
+  margin-left: 3em;
+}
+
+#right {
+  text-align: center;
+}
+
+
+
+
+.rad {
+  display: block;
+  margin-left: 1.5em;
+
+}
+
+.spacer {
+  width: 2em;
+  margin-left: 1.25em;
+}
+
+
+

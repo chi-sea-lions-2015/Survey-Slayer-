@@ -1,0 +1,21 @@
+ <%@survey.questions.each do |question|%>
+
+              <p><%=question.id%>. <%=question.title%></p>
+
+              <p class="rad">
+              <input type="radio" name="choice[choice_id]" value=<%=question.choices[0].id%>/><span class="spacer"></span><%=question.choices[0].title%>
+              </p>
+
+              <p class="rad">
+              <input type="radio" name="choice[choice_id]" value=<%=question.choices[1].id%> /><span class="spacer"></span><%=question.choices[1].title%>
+              </p>
+
+              <p class="rad">
+              <input type="radio" name="choice[choice_id]" value=<%=question.choices[2].id%> /><span class="spacer"></span><%=question.choices[2].title%>
+              </p>
+
+              <p class="rad">
+              <input type="radio" name="choice[choice_id]" value= <%=question.choices[3].id%>/><span class="spacer"></span><%=question.choices[3].title%>
+              </p>
+
+              <%end%>

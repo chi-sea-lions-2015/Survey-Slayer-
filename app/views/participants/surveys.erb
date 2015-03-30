@@ -1,10 +1,12 @@
 
-<br><br><br>
+
   <div id="show-lists" class="row">
     <div class="large-12 columns">
       <div class="panel">
 
-        <h2><%=@survey.title%></h2><br>
+
+
+          <h2><%=@survey.title%></h2><br>
 
 
 
@@ -13,20 +15,15 @@
 
 
             <form action="/participants/survey/<%=@survey_id%>/response" method="post">
-                    <%@survey.questions.each do |question|%>
 
 
-              <p><%=question.id%>. <%=question.title%></p>
+              <%= erb :'/participants/_next' %>
 
-              <input type="radio" name="choice[choice_id]" value=<%=question.choices[0].id%>/><%=question.choices[0].title%>
-              <input type="radio" name="choice[choice_id]" value=<%=question.choices[1].id%> /><%=question.choices[1].title%>
-              <input type="radio" name="choice[choice_id]" value=<%=question.choices[2].id%> /><%=question.choices[2].title%>
-              <input type="radio" name="choice[choice_id]" value= <%=question.choices[3].id%>/><%=question.choices[3].title%>
               <input type="submit" value="submit"/>
-                    </form>
+                    </form><br>
 
 
-            <%end%>
+
 
 
       </div>
