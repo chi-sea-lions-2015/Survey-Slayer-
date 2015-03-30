@@ -1,7 +1,16 @@
-<%@surveys = @surveys.where(creator_id: current_user.id)%>
-<ul>
-<%@surveys.each do |survey|%>
+<div id="show-lists" class="row">
+  <div class="large-12 columns">
+    <div class="panel">
 
-  <li><a href="/surveys/<%=survey.id%>/results"><%=survey.title%></a></li>
-<%end%>
-</ul>
+
+      <h2>My Surveys</h2>
+      <%@my_surveys.each do |survey|%>
+        <a href="surveys/<%=survey.id%>"><%=survey.title%></a><br>
+      <%end%>
+
+
+
+
+    </div>
+  </div>
+</div>

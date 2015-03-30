@@ -6199,3 +6199,44 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
+
+
+
+
+
+
+
+
+#show-lists {
+  margin-top: 5em;
+}
+
+#survey-in-progress {
+  list-style: none;
+}
+
+.radio-button {
+  display: inline;
+  padding-top: 1em;
+  margin-left: 2em;
+}
+
+.rb {
+  display: block;
+  padding-left: 2em;
+}
+
+.space {
+  padding-left: .6em;
+}
+
+#edit-table th {
+  width: 14em;
+}
+
+.surveys-erb {
+  margin-top: 10em;
+  padding-top: 20em;
+  position: absolute;
+  top: 20em;
+}

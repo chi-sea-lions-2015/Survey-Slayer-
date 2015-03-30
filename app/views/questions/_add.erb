@@ -1,0 +1,8 @@
+<form id="question_create_form" action="/surveys/<%=@survey.id%>/questions" method="POST">
+  <input type="text" name="question[title]" placeholder="What's your question?">
+  <input type="text" name="choice1[title]" placeholder="Enter a choice for the question?">
+  <input type="text" name="choice2[title]" placeholder="Enter a choice for the question?">
+  <input type="text" name="choice3[title]" placeholder="Enter a choice for the question?">
+  <input type="text" name="choice4[title]" placeholder="Enter a choice for the question?">
+  <input id="create_choice_button" type="submit" value="Add new question">
+</form>

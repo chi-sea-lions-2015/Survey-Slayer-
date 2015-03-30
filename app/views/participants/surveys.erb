@@ -1,30 +1,36 @@
-<div id="show-lists" class="row">
-  <div class="large-12 columns">
-    <div class="panel">
 
-      <h2><%=@survey.title%></h2><br>
+<br><br><br>
+  <div id="show-lists" class="row">
+    <div class="large-12 columns">
+      <div class="panel">
 
-      <%@survey.questions.each do |question|%>
-
-          <span>
-            <%=question.id%>. <%=question.title%>
-          </span><br>
+        <h2><%=@survey.title%></h2><br>
 
 
 
 
 
-          <form action="/participants/survey/<%=@survey_id%>" method="post">
-            <input type="hidden" name="_method" value="put"/>
-            <%= erb :'participants/_choices', locals: { question: question, choices: @choices} %>
-          </form>
-
-      <%end%>
 
 
+            <form action="/participants/survey/<%=@survey_id%>/response" method="post">
+                    <%@survey.questions.each do |question|%>
 
+
+              <p><%=question.id%>. <%=question.title%></p>
+
+              <input type="radio" name="choice[choice_id]" value=<%=question.choices[0].id%>/><%=question.choices[0].title%>
+              <input type="radio" name="choice[choice_id]" value=<%=question.choices[1].id%> /><%=question.choices[1].title%>
+              <input type="radio" name="choice[choice_id]" value=<%=question.choices[2].id%> /><%=question.choices[2].title%>
+              <input type="radio" name="choice[choice_id]" value= <%=question.choices[3].id%>/><%=question.choices[3].title%>
+              <input type="submit" value="submit"/>
+                    </form>
+
+
+            <%end%>
+
+
+      </div>
     </div>
   </div>
-</div>
 
 

@@ -1,0 +1,51 @@
+<div id="show-lists" class="row">
+  <div class="large-12 columns">
+    <div class="panel">
+
+
+
+      <h2><%=@survey.title%></h2><br>
+
+
+
+
+      <table id="edit-table">
+
+        <thead>
+           <th>
+            Question Title
+          </th>
+          <th></th>
+
+          <th></th>
+          <th></th>
+          <th></th>
+        </thead>
+
+        <tbody>
+        <%@survey.questions.each do |q| %>
+
+        <tr>
+          <td>
+            <%=q.title%>
+          </td>
+          <td><a href="/surveys/<%=@survey.id%>/questions/<%=q.id%>/edit">Edit Question</a>
+</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+      <%end%>
+
+        </tbody>
+
+
+      </table>
+
+
+
+
+   </div>
+  </div>
+</div>
