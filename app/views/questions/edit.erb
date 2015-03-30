@@ -1,0 +1,30 @@
+<div id="show-lists" class="row">
+  <div class="large-12 columns">
+    <div class="panel">
+
+
+
+      <form action="/surveys/<%=@survey.id%>/questions/<%=@question.id%>/edit" method="POST">
+        <input type="hidden" name="_method" value="PUT" />
+        <%@choices=@question.choices%>
+
+        <h2><%=@survey.title%></h2><br>
+        <label><h4>Question Title</h4></label>
+        <input type="text" name="question[title]" placeholder="What's your question?" value="<%=@question.title%>">
+        <label><h5>Choice 1</h5></label>
+        <input type="text" name="choice1[title]" placeholder="Enter a choice for the question?" value="<%=@choices[0].title%>">
+        <label><h5>Choice 2</h5></label>
+        <input type="text" name="choice2[title]" placeholder="Enter a choice for the question?" value="<%=@choices[1].title%>">
+        <label><h5>Choice 3</h5></label>
+        <input type="text" name="choice3[title]" placeholder="Enter a choice for the question?" value="<%=@choices[2].title%>">
+        <label><h5>Choice 4</h5></label>
+        <input type="text" name="choice4[title]" placeholder="Enter a choice for the question?" value="<%=@choices[3].title%>">
+        <input id="create_choice_button" type="submit" value="Save Changes">
+      </form>
+
+
+
+
+    </div>
+  </div>
+</div>
