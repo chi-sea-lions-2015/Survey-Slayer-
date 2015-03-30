@@ -16,31 +16,29 @@ $(document).ready(function() {
         $("#survey_create_form").css({display: "none"});
         $("body").append(response.question_form)
         $("#heading").text(response.title)
-        surveyId = response.survey_id
+        window.surveyId = response.survey_id
       },
-      'complete': function(response){
-        console.log(response)
-        // $("body").append(response)
-      },
-
     });
   });
 
   $("#question_create_form").submit(function(e){
     e.preventDefault();
+    console.log("YAY");
+
+
     var form = $(this);
     console.log(this);
     $.ajax({
       "url": "/surveys/" + surveyId + "/questions",
       "method": "post",
       "data": form.serialize(),
+      "dataType": "json",
       'success': function(response){
         console.log(response);
 
       }
-
+      });
     });
-  });
 
 
 });

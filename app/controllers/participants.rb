@@ -1,7 +1,6 @@
 get '/participants/show' do
-  @user_id = session[:user_id]
+  # @user_id = session[:user_id]
   @surveys = Survey.all
-  p @surveys
   erb :'participants/show'
 end
 
